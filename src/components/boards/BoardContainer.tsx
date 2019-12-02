@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import ShowAllBoards from './ShowAllBoards';
 import { connect } from 'react-redux';
 import { fadeIn } from '../../Variables/Animation';
 
@@ -27,6 +28,13 @@ class BoardContainer extends React.Component {
         )
     }
 };
+
+const Wrapper = styled.div`
+    display: flex;
+    padding: 60px 35px;
+    flex-wrap: wrap;
+    animation: ${fadeIn} 300ms linear;
+`;
 
 function mapStateToProps({ boardsCollection }) {
     return (
