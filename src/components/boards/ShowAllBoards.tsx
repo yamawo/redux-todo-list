@@ -22,7 +22,7 @@ const BoardWrapper = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5.5px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0,16), 0 3px 6px rgba(0,0,0,0,23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     cursor: pointer;
     transition: 200ms ease-in-out;
     font-weight: 900;
