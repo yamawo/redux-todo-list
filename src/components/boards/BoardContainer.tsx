@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import ShowAllBoards from './ShowAllBoards';
+import CreateBoardContainer from './boardCreation/CreateBoardContainer';
 import { connect } from 'react-redux';
 import { fadeIn } from '../../Variables/Animation';
 
