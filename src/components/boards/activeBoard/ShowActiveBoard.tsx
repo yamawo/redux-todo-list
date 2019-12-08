@@ -10,5 +10,11 @@ import ListEditingMode from './lists/ListEditingMode';
 import ListItemsContainer from './lists/ListItemsContainer';
 
 class ShowActiveBoard extends React.Component {
-    
+    componentDidMount() {
+        const {
+            match,
+            selectActiveBoard,
+        } = this.props;
+        selectActiveBoard(match.params.id);
+    }
 }
