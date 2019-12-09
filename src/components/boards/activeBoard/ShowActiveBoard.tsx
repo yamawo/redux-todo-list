@@ -51,7 +51,7 @@ class ShowActiveBoard extends React.Component {
     }
 }
 
-function mapStateToProps ({ activeBoard }) {
+const mapStateToProps = ({ activeBoard }) => {
     return {
         activeBoard
     }

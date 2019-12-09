@@ -13,7 +13,7 @@ const CreateBoardContainer = ({ newBoard }: Props) => (
     </div>
 );
 
-function mapStateToProps({ newBoard }) {
+const mapStateToProps = ({ newBoard }) => {
     return {
         newBoard
     }

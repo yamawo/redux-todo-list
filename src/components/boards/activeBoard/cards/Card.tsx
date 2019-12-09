@@ -52,9 +52,43 @@ class Card extends React.Component {
             <div>
                 <CardWrapper style={cardStyles}>
                     <CardTitle>{title}</CardTitle>
-                    <ArchiveTask onClick={() => }
+                    <ArchiveTask onClick={() => this.togglePost(cardId, listId)}>✓</ArchiveTask>
                 </CardWrapper>
             </div>
         )
     }
 }
+
+const CardWrapper = styled.div`
+    margin: 10px 0;
+    padding: 14px 7px;
+    background: rgb(241, 241, 241);
+    border-radius: 4.5px;
+    cursor: grab;
+    animation: ${ fadeIn } 300ms linear;
+    display: flex;
+    justify-content: space-around;
+`;
+
+const CardTitle = styled.h3`
+    font-weight: bold;
+    font-size: 19px;
+    margin: 0;
+`;
+
+const ArchiveTask = styled.div`
+    padding: 4px 7px;
+    opacity: 0.4;
+    border: none;
+    border-radius: 9999;
+    cursor: pointer;
+    font-size: 16px;
+`;
+
+const mapStateToProps = ({ activeBoardData }) => {
+    return {
+        activeBoardData
+    }
+}
+
+export default connect(mapStateToProps, { archiveCard })(Card);

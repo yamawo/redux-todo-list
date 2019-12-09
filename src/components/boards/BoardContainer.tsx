@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     animation: ${fadeIn} 300ms linear;
 `;
 
-function mapStateToProps({ boardsCollection }) {
+const mapStateToProps = ({ boardsCollection }) =>{
     return (
         boardsCollection
     )

@@ -22,7 +22,7 @@ let BoardTitleForm = (props) => {
     )
 }
 
-function validate(values) {
+const validate = (values) => {
     let errors = {};
     
     if(!values.boardTitle || values.boardTitle === '') {
