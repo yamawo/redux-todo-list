@@ -5,8 +5,8 @@ import {
 } from './ActionTypes';
 import Store from '../Store';
 
-export default function selectActiveBoard(id) {
-    return dispatch => {
+export default function selectActiveBoard(id: number) {
+    return (dispatch: { (arg0: { type: string; payload: any; }): void; (arg0: { type: string; }): void; }) => {
         const boardsCollection = Store.getState().boardsCollection;
         const activeBoard = find(boardsCollection, board => board.id === id);
 

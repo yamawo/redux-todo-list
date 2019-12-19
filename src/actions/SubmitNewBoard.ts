@@ -4,8 +4,8 @@ import {
 } from './ActionTypes';
 import Store from '../Store';
 
-export default function submitNewBoard(title) {
-    return dispatch => {
+export default function submitNewBoard(title: string) {
+    return (dispatch: { (arg0: { type: string; payload: string; }): void; (arg0: { type: string; payload: { id: number; title: string; }; }): void; }) => {
         dispatch({ type: SUBMIT_NEW_BOARD, payload: title });
 
         const newBoard = {
